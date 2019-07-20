@@ -1,13 +1,13 @@
 body{
     font-family: 'Open Sans', sans-serif;
+    font-size:16px;
 }
 
 #container{
-    background: url("Photos/fLmAxoy-friends-tv-show-wallpapers.jpg") no-repeat;
-    background-size: cover;
     background-position:center;
-    width: 50%;
-    height: 500px;
+    background:black;
+    height: 750px;
+    max-width:80%;
     border: 4px solid #B0E0E6;
     border-radius: 5px;
     color: #FFFFFF;
@@ -16,33 +16,44 @@ body{
     margin:auto
 }
 
+#container img{
+    margin:0 auto;
+    margin-top: 7%;
+    max-width:80%;
+    display:block;
+}
+
+.wrapper{
+    width:85%;
+    margin:0 auto;
+}
+
 ul{
     list-style: none;
+    padding-left:0;
 }
 
 #countdown{
-    margin:20px 50px;
     position:absolute;
     z-index:10;
+    top:10%;
 }
 
 #question{
-    margin-top: 190px;
-    margin-left:50px;
+    margin-top: 8%;
+    margin-left: 2%;
 }
 
 #answerDisplay{
-    margin:200px 150px;
-    position:absolute;
-    z-index:10;
+    margin:0 10%;
 }
 
 .button{
     position: relative;
     float:right;
-    top:45px;
-    right:20px;
-    padding:10px 20px;
+    top:40%;
+    right:0;
+    padding: 2% 5%;
     background-color:black;
     color: white;
     border: 3px solid blue;
@@ -56,21 +67,80 @@ ul{
 }
 
 #GIF1{
-    margin:-30px 90px;
-    position:absolute;
-    z-index:99;
+    width:20%;
+    justify-content: center;
 }
 
 #GIF2{
-    margin:-40px 200px;
-    position:absolute;
-    z-index:99;
-    height: 250px;
+    width:20%;
+    justify-content: center;
 }
 
 #GIF3{
-    margin:-40px 120px;
-    position:absolute;
-    z-index:99;
-    height: 250px;
+    width:20%;
+    justify-content: center;
+}
+
+#answerDisplay p{
+    text-align: center;
+    font-size: 17px;
+}
+
+
+
+/*media queries*/
+
+@media screen and (min-device-width: 360px) and (max-device-width: 650px) {
+    body{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-device-width: 360px) {
+    body{
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-device-width: 316px)and (max-device-width: 707px) {
+    #container img{
+        margin-top: 15%;
+
+    }
+}
+
+@media screen and (min-device-width: 270px)and (max-device-width: 316px) {
+    #container img{
+        margin-top: 20%;
+
+    }
+}
+
+@media screen and (min-device-width: 134px) and (max-device-width: 270px) {
+    #container img{
+        margin-top: 35%;
+
+    }
+}
+
+@media screen and (max-device-width: 134px) {
+    #container img{
+        margin-top: 55%;
+
+    }
+}
+
+
+@media screen and (max-device-width: 1160px) {
+    #GIF1, #GIF2, #GIF3{
+        width: 40%;
+        justify-content: center;
+
+    }
+}
+
+@media screen and (max-device-width: 131px) {
+    #answerDisplay p{
+        font-size: 12px;
+     }
 }
