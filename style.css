@@ -16,7 +16,7 @@ body{
     margin:auto
 }
 
-#container img{
+#container .friends{
     margin:0 auto;
     margin-top: 7%;
     max-width:80%;
@@ -34,9 +34,7 @@ ul{
 }
 
 #countdown{
-    position:absolute;
-    z-index:10;
-    top:10%;
+    margin-top:5%;
 }
 
 #question{
@@ -48,37 +46,35 @@ ul{
     margin:0 10%;
 }
 
-.button{
-    position: relative;
+button{
     float:right;
-    top:40%;
-    right:0;
     padding: 2% 5%;
     background-color:black;
     color: white;
+    font-size: 18px;
     border: 3px solid blue;
     border-radius: 5px;
-    margin: 7px;
+    margin: 5%;
 }
 
-.button a{
+button a{
     text-decoration:none;
     color: white;  
 }
 
 #GIF1{
-    width:20%;
-    justify-content: center;
+    width:80%;
+    margin:0 auto;
 }
 
 #GIF2{
-    width:20%;
-    justify-content: center;
+    width:35%;
+    margin:0 auto;
 }
 
 #GIF3{
-    width:20%;
-    justify-content: center;
+    width:50%;
+    margin:0 auto;
 }
 
 #answerDisplay p{
@@ -130,17 +126,31 @@ ul{
     }
 }
 
+@media screen and (min-device-width: 730px) and (max-device-width: 940px) {
+    #container{
+        height: 620px;
+    }
+}
 
-@media screen and (max-device-width: 1160px) {
-    #GIF1, #GIF2, #GIF3{
-        width: 40%;
-        justify-content: center;
+@media screen and (min-device-width: 416px) and (max-device-width: 730px) {
+    #container{
+        height: 500px;
+    }
+}
 
+
+@media screen and (max-device-width: 416px) {
+    #container{
+        height: 380px;
     }
 }
 
 @media screen and (max-device-width: 131px) {
     #answerDisplay p{
         font-size: 12px;
+     }
+
+     button{
+        font-size: 16px;
      }
 }

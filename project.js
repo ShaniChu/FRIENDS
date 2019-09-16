@@ -27,7 +27,7 @@ $(document).ready(function(){
             correctAnswer:"Days of our lifes"
         },
         {
-            question:"Name one of the designers Rachel works for",
+            question:"Name one of the designers Rachel works for?",
             choices:["Ralph Lauren","Donna Karan","Kenzo","Prada"],
             correctAnswer:"Ralph Lauren"
         },
@@ -79,12 +79,23 @@ $(document).ready(function(){
   function choisesRadio(index){
     let radioList = $('<ul>');
     let input = '';
+    let label = '';
 
     for(let i = 0; i < questions[index].choices.length; i++){
         let item = $('<li>');
-        input = '<input type = "radio" name = "answer" value = "' + questions[index].choices[i] + '"/>';
-        input += questions[index].choices[i];
-        item.append(input);
+        let optionText = questions[index].choices[i];
+
+        // label = '<label for="' + optionText + '">' + optionText + '</label>';
+
+        label = `<label for="${optionText}"> ${optionText} <label>`;
+        console.log(label);
+
+
+        input = '<input type = "radio" name = "answer" id = "'+optionText+'" value = "' + optionText + '"/>';
+        
+        item.append(input)
+        .append(label);
+
         radioList.append(item);
     };
     return radioList;
