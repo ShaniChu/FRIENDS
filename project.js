@@ -85,16 +85,11 @@ $(document).ready(function(){
         let item = $('<li>');
         let optionText = questions[index].choices[i];
 
-        // label = '<label for="' + optionText + '">' + optionText + '</label>';
-
         label = `<label for="${optionText}"> ${optionText} <label>`;
-        console.log(label);
-
 
         input = '<input type = "radio" name = "answer" id = "'+optionText+'" value = "' + optionText + '"/>';
         
-        item.append(input)
-        .append(label);
+        item.append(input).append(label);
 
         radioList.append(item);
     };
@@ -155,12 +150,12 @@ $(document).ready(function(){
  function questionTimer(){
     let timeleft = 10;
     questionInterval= setInterval(function(){
-            document.getElementById('countdown').innerHTML = timeleft + " seconds remaining";
+            document.getElementById('countdown').innerHTML = '<p>'+ '' + (timeleft) + ' ' + 'seconds remaining </p>';
             timeleft -= 1;
             if(timeleft <= 0){
                 clearInterval();
-                document.getElementById('countdown').innerHTML = "Finished"
-                if (document.getElementById('countdown').innerHTML === "Finished"){
+                document.getElementById('countdown').innerHTML = 'Finished'
+                if (document.getElementById('countdown').innerHTML === 'Finished'){
                     
                           stopQuestionTimer();
                           $('#question').empty();
