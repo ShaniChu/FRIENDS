@@ -8,6 +8,17 @@ You have only 10 seconds to answer each question and you’ll have a small surpr
 This fun little quiz was built using JavaScript and jQuery.
 
 
+## Technologies
+Project is created with:
+
+* Javascript
+
+* jQuery
+
+* HTML5
+
+* CSS3
+
 
 
 
